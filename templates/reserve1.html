@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="""en
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        <button class="reserve-button" onclick="window.location.href='reserve.html'">Reserve a Table</button>
+    </section>
+
+    <!-- Our Top Sellers Section -->
+    <section class="top-sellers">
+        <h2>Our Top Sellers</h2>
+        <div class="menu-item">
+            <img src="top-seller1.jpg" alt="Top Seller 1">
+            <h3>Item 1</h3>
+            <p>Description of item 1.</p>
+        </div>
+        <div class="menu-item">
+            <img src="top-seller2.jpg" alt="Top Seller 2">
+            <h3>Item 2</h3>
+            <p>Description of item 2.</p>
+        </div>
+        <div class="menu-item">
+            <img src="top-seller3.jpg" alt="Top Seller 3">
+            <h3>Item 3</h3>
+            <p>Description of item 3.</p>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>"></html>
