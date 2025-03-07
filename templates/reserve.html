@@ -6,9 +6,11 @@
     <title>RESERVE A TABLE</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url("drive-download-20250307T085744Z-001\Steaming Coffee Cup.webp");
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url("static\images\Roasted Coffee Beans.jpg");
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,10 +18,10 @@
             margin: 0;
         }
         form {
-            background-color: rgba(104, 12, 12, 0.9);
+            background-color: rgba(95, 11, 11, 0.829);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(250, 38, 38, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
         }
         label {
@@ -34,15 +36,15 @@
         input[type="time"],
         input[type="number"] {
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             margin-bottom: 10px;
-            border: 1px solid #c52727;
-            border-radius: 4px;
+            border: 1px solid #bccf11;
+            border-radius: 10px;
         }
         input[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color: #28a745;
+            background-color: #c2e446;
             border: none;
             border-radius: 4px;
             color: rgb(70, 53, 53);
@@ -50,31 +52,31 @@
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #248338;
+            background-color: #368346;
         }
     </style>
 </head>
 <body>
     <form action="/submit_reservation" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="your name" required><br><br>
         
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="write your email address" required><br><br>
         
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><br>
         
-        <label for="date">Date:</label>
+        <label for="date">Reservation Date:</label>
         <input type="date" id="date" name="date" required><br><br>
         
-        <label for="time">Time:</label>
+        <label for="time">Reservation Time:</label>
         <input type="time" id="time" name="time" required><br><br>
         
         <label for="guests">Number of Guests:</label>
-        <input type="number" id="guests" name="guests" required><br><br>
+        <input type="number" id="guests" name="guests" placeholder="can exceed more than 1" required><br><br>
         
-        <input type="submit" value="Submit">
+        <input type="submit" value="Book the tabel now">
     </form>
 </body>
 </html>
